@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="col-12 flex-start bg-azul-conselho">
-            <h1 class=" text-uppercase">CONseLHO DE CLASSE</h1>
+            <h1 class="text-uppercase">conselho de classes</h1>
             <i></i>
         </div>
     </header>
