@@ -10903,7 +10903,84 @@ a.text-dark:focus {
   }
 }
 
-.bg-azul-conselho {
+html {
+  font-size: 36px;
+}
+
+.topo-pagina-conselho {
+  width: 100%;
   background-color: #0B12BD;
+}
+
+.topo-pagina-conselho div {
+  display: flex;
+  width: 96%;
+  min-width: 425px;
+  margin: auto;
+  height: 10vh;
+}
+
+.topo-pagina-conselho h1 {
+  margin: 0 8px;
+  line-height: 10vh;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Viga", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.topo-pagina-conselho img {
+  margin: 0 8px;
+  line-height: 62px;
+  width: 52px;
+}
+
+.grid-principal-conselho {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 90vh;
+}
+
+.menu-principal {
+  border-right: 1px solid #1d1d1d;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.menu-principal > div:first-child {
+  border-bottom: 1px solid #1d1d1d;
+  height: 72px;
+}
+
+.menu-principal > div:first-child h1 {
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 72px;
+}
+
+.menu-principal ul {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0;
+}
+
+.menu-principal li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.menu-principal li > div {
+  display: flex;
+}
+
+.menu-principal li > div svg {
+  margin-left: 18px;
+}
+
+.menu-principal li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 0.625rem;
 }
 

@@ -1,13 +1,91 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-//inicio dos adicionais para o projeto__________________________________________________________________
+//inicio dos adicionais para o projeto
+
+html {
+    font-size: 36px;
+}
 
 $theme-colors: (
     "azul-conselho": #0B12BD,
 );
 
-.bg-azul-conselho {
+//fim dos adicionais para o projeto
+
+//para o topo da página ->
+.topo-pagina-conselho {
+    width: 100%;
     background-color: map-get($theme-colors, "azul-conselho");
+
+    div {
+        display: flex;
+        width: 96%;
+        min-width: 425px;
+        margin: auto;
+        height: 10vh;
+    }
+
+    h1 {
+        margin: 0 8px;
+        line-height: 10vh;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family: 'Viga', sans-serif;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    img {
+        margin: 0 8px;
+        line-height: 62px;
+        width: 52px;
+    }
 }
 
-//fim dos adicionais para o projeto_____________________________________________________________________
+//para o centro da página
+.grid-principal-conselho {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 90vh;
+}
+
+.menu-principal {
+    border-right: 1px solid rgb(29, 29, 29);
+    font-family: 'Tomorrow', sans-serif;
+
+    & > div:first-child {
+        border-bottom: 1px solid rgb(29, 29, 29);
+        height: 72px;
+        h1 {
+            font-size: 0.875rem;
+            text-align: center;
+            line-height: 72px;
+        }
+    }
+
+    ul {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        margin: 12px 0;
+
+        & > div {
+            display: flex;
+
+            svg {
+                margin-left: 18px;
+            }
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 0.625rem;
+        }
+    }
+}
