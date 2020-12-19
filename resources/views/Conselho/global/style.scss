@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap.scss";
-
 //inicio dos adicionais para o projeto
 
 html {
@@ -89,3 +87,6 @@ $theme-colors: (
         }
     }
 }
+
+// Importe do bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
