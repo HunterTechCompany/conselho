@@ -81,9 +81,11 @@ $theme-colors: (
 
         a {
             display: block;
+            width: 100%;
             text-decoration: none;
             color: black;
             font-size: 0.625rem;
+            transition: all 0.4s;
         }
     }
 }
