@@ -4,85 +4,6 @@ html {
   font-size: 36px;
 }
 
-.topo-pagina-conselho {
-  width: 100%;
-  background-color: #0B12BD;
-}
-
-.topo-pagina-conselho div {
-  display: flex;
-  width: 96%;
-  min-width: 425px;
-  margin: auto;
-  height: 10vh;
-}
-
-.topo-pagina-conselho h1 {
-  margin: 0 8px;
-  line-height: 10vh;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Viga", sans-serif;
-  text-transform: uppercase;
-  color: white;
-}
-
-.topo-pagina-conselho img {
-  margin: 0 8px;
-  line-height: 62px;
-  width: 52px;
-}
-
-.grid-principal-conselho {
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  grid-template-rows: 90vh;
-}
-
-.menu-principal {
-  border-right: 1px solid #1d1d1d;
-  font-family: "Tomorrow", sans-serif;
-}
-
-.menu-principal > div:first-child {
-  border-bottom: 1px solid #1d1d1d;
-  height: 72px;
-}
-
-.menu-principal > div:first-child h1 {
-  font-size: 0.875rem;
-  text-align: center;
-  line-height: 72px;
-}
-
-.menu-principal ul {
-  padding-left: 12px;
-  padding-right: 12px;
-  margin: 0;
-}
-
-.menu-principal li {
-  list-style: none;
-  margin: 12px 0;
-}
-
-.menu-principal li > div {
-  display: flex;
-}
-
-.menu-principal li > div svg {
-  margin-left: 18px;
-}
-
-.menu-principal li a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-  font-size: 0.625rem;
-  transition: all 0.4s;
-}
-
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -11156,5 +11077,114 @@ a.text-azul-conselho:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.topo-pagina-conselho {
+  width: 100%;
+  background-color: #0B12BD;
+}
+
+.topo-pagina-conselho div {
+  display: flex;
+  width: 96%;
+  min-width: 425px;
+  margin: auto;
+  height: 10vh;
+}
+
+.topo-pagina-conselho h1 {
+  margin: 0 8px;
+  line-height: 10vh;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Viga", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.topo-pagina-conselho img {
+  margin: 0 8px;
+  line-height: 62px;
+  width: 52px;
+}
+
+.grid-principal-conselho {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  min-height: 90vh;
+}
+
+.menu-principal {
+  grid-column: 1;
+  border-right: 1px solid #1d1d1d;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.menu-principal > div:first-child {
+  border-bottom: 1px solid #1d1d1d;
+  height: 72px;
+}
+
+.menu-principal > div:first-child h1 {
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 72px;
+}
+
+.menu-principal ul {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0;
+}
+
+.menu-principal li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.menu-principal li > div {
+  display: flex;
+}
+
+.menu-principal li > div svg {
+  margin-left: 18px;
+}
+
+.menu-principal li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  font-size: 0.625rem;
+}
+
+main {
+  padding: 10px 20px;
+  font-size: 0.625rem;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+.titulo-pagina h1 {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.link:hover {
+  transition: all 0.4s;
+  color: #0B12BD;
+}
+
+.table th {
+  padding: 0;
+}
+
+.grid-4-vertical {
+  display: grid;
+  grid-template-rows: 0.5fr 320px 0.5fr 1fr;
+  row-gap: 10px;
 }
 

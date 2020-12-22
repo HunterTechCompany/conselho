@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Conselho de Classes</title>
     <link rel="stylesheet" href="{{ asset('conselho/css/style.css') }}">
 
     <!-- fonte Viga -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    {{-- fonte Viga --}}
 
     <!-- fonte Tomorrow -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    {{-- fonte Tomorrow --}}
+
+    {{-- font awesome icons --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    {{-- font awesome icons --}}
 
 </head>
 <body>
@@ -36,27 +42,25 @@
                     <ul>
                         <li>
                             <div>
-                                <a href="">Turma
-                                    <svg width="20px" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
+                                <a class="link" href="">Turma
+                                    <i class="fas fa-plus-circle"></i>
                                 </a>
                             </div>
                         </li>
                         <li>
-                            <a href="">Importar planilha</a>
+                            <a class="link" href="">Importar planilha</a>
                         </li>
                         <li>
-                            <a href="">Visualizar alunos</a>
+                            <a class="link" href="">Visualizar alunos</a>
                         </li>
                         <li>
-                            <a href="">Gerenciar turmas</a>
+                            <a class="link" href="">Gerenciar turmas</a>
                         </li>
                         <li>
-                            <a href="">Bimestre</a>
+                            <a class="link" href="">Bimestre</a>
                         </li>
                         <li>
-                            <a href="">Sair</a>
+                            <a class="link" href="">Sair</a>
                         </li>
                     </ul>
                 </nav>
@@ -64,14 +68,25 @@
         </div>
         <div>
             <main>
-                <h1 style="text-align: center; font-size: 1rem; font-weight: bold; font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
+
+                <h1 id="titulo-conselho" style="text-align: center; font-size: 1rem; font-weight: bold; font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
+
+                @yield('main-page')
+
             </main>
         </div>
     </div>
-
+    {{-- bootstrap e jquery --}}
     <script src="{{ asset('conselho/js/jquery.js') }}"></script>
     <script src="{{ asset('conselho/js/bootstrap.js') }}"></script>
+    {{-- bootstrap e jquery --}}
 
+    {{-- font awesome icons --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    {{-- font awesome icons --}}
+
+    {{-- script global --}}
     <script src="{{ asset('conselho/js/global.js') }}"></script>
+    {{-- script global --}}
 </body>
 </html>

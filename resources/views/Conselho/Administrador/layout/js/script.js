@@ -1,14 +1,6 @@
-let a = document.getElementsByTagName('a');
-for(let i = 0; i < a.length; i++) {
-    a[i].addEventListener('mouseenter', function(){contrastar(a[i])});
-    a[i].addEventListener('mouseleave', function(){contrastar(a[i])});
+var base_url = window.location.origin;
+var url = window.location.href;
+
+if(url != base_url + '/') {
+    document.getElementById('titulo-conselho').style.display = "none";
 }
-
-function contrastar(elemento) {
-    if(elemento.style.color == 'red') {
-        elemento.style.color = 'black';
-    } else {
-        elemento.style.color = 'red';
-    }
-
-};

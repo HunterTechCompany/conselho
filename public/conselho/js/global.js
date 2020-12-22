@@ -93,30 +93,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var a = document.getElementsByTagName('a');
+var base_url = window.location.origin;
+var url = window.location.href;
 
-var _loop = function _loop(i) {
-  a[i].addEventListener('mouseenter', function () {
-    contrastar(a[i]);
-  });
-  a[i].addEventListener('mouseleave', function () {
-    contrastar(a[i]);
-  });
-};
-
-for (var i = 0; i < a.length; i++) {
-  _loop(i);
+if (url != base_url + '/') {
+  document.getElementById('titulo-conselho').style.display = "none";
 }
-
-function contrastar(elemento) {
-  if (elemento.style.color == 'red') {
-    elemento.style.color = 'black';
-  } else {
-    elemento.style.color = 'red';
-  }
-}
-
-;
 
 /***/ }),
 

@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Conselho/Administrador/layout/layout');
+    return view("Conselho.Administrador.layout.layout");
+});
+
+Route::get('/teste', function(){
+    return view("Conselho.Administrador.Atendimentos.tipos_de_atendimentos.tipos");
 });

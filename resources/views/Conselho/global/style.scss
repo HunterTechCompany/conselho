@@ -10,6 +10,9 @@ $theme-colors: (
 
 //fim dos adicionais para o projeto
 
+// Importe do bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
 //para o topo da página ->
 .topo-pagina-conselho {
     width: 100%;
@@ -44,10 +47,11 @@ $theme-colors: (
 .grid-principal-conselho {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 90vh;
+    min-height: 90vh;
 }
 
 .menu-principal {
+    grid-column: 1;
     border-right: 1px solid rgb(29, 29, 29);
     font-family: 'Tomorrow', sans-serif;
 
@@ -85,10 +89,36 @@ $theme-colors: (
             text-decoration: none;
             color: black;
             font-size: 0.625rem;
-            transition: all 0.4s;
         }
     }
 }
 
-// Importe do bootstrap
-@import "~bootstrap/scss/bootstrap.scss";
+main {
+    padding: 10px 20px;
+    font-size: 0.625rem;
+}
+
+html * {
+    padding: 0;
+    margin: 0;
+}
+
+.titulo-pagina {
+    h1 {
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+}
+
+.link:hover {
+    transition: all 0.4s;
+    color: map-get($theme-colors, "azul-conselho");
+}
+
+.table {
+    th {
+        padding: 0
+    }
+}
+
+@import "../Administrador/Atendimentos/tipos_de_atendimentos/scss/style.scss";
