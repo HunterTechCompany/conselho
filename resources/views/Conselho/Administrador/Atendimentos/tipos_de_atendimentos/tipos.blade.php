@@ -20,7 +20,7 @@
             </div>
         </div>
         <div style="background-color: red">
-            <table class=" table table-condensed table-hover">
+            <table class=" table table-condensed table-hover table">
                 <thead>
                     <tr>
                         <th colspan="4">
