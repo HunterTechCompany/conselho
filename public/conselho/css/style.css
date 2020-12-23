@@ -11079,112 +11079,100 @@ a.text-azul-conselho:focus {
   }
 }
 
-.topo-pagina-conselho {
-  width: 100%;
-  background-color: #0B12BD;
+html * {
+  box-sizing: border-box;
 }
 
-.topo-pagina-conselho div {
-  display: flex;
-  width: 96%;
-  min-width: 425px;
-  margin: auto;
-  height: 10vh;
+.header {
+  padding: 0px 12px;
 }
 
-.topo-pagina-conselho h1 {
-  margin: 0 8px;
+.header * {
   line-height: 10vh;
-  font-weight: bold;
-  font-size: 1rem;
   font-family: "Viga", sans-serif;
-  text-transform: uppercase;
   color: white;
 }
 
-.topo-pagina-conselho img {
-  margin: 0 8px;
-  line-height: 62px;
+.font-1rem * {
+  font-size: 1rem;
+}
+
+.font-1rem img {
   width: 52px;
 }
 
-.grid-principal-conselho {
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  min-height: 90vh;
+.link-pagina {
+  margin-top: 26px;
 }
 
-.menu-principal {
-  grid-column: 1;
-  border-right: 1px solid #1d1d1d;
-  font-family: "Tomorrow", sans-serif;
-}
-
-.menu-principal > div:first-child {
-  border-bottom: 1px solid #1d1d1d;
-  height: 72px;
-}
-
-.menu-principal > div:first-child h1 {
-  font-size: 0.875rem;
-  text-align: center;
-  line-height: 72px;
-}
-
-.menu-principal ul {
-  padding-left: 12px;
-  padding-right: 12px;
+.link-pagina * {
   margin: 0;
+  padding: 0;
 }
 
-.menu-principal li {
+.link-pagina li {
   list-style: none;
-  margin: 12px 0;
+  margin-bottom: 14px;
 }
 
-.menu-principal li > div {
-  display: flex;
-}
-
-.menu-principal li > div svg {
-  margin-left: 18px;
-}
-
-.menu-principal li a {
-  display: block;
-  width: 100%;
+.link-pagina li a {
   text-decoration: none;
   color: black;
-  font-size: 0.625rem;
+  padding: 0px 24px 12px 0px;
 }
 
-main {
-  padding: 10px 20px;
-  font-size: 0.625rem;
-}
-
-html * {
-  padding: 0;
-  margin: 0;
-}
-
-.titulo-pagina h1 {
-  font-size: 1rem;
-  font-weight: bolder;
-}
-
-.link:hover {
-  transition: all 0.4s;
+.link-pagina li a:hover {
   color: #0B12BD;
+  transition: all 0.4s;
 }
 
-.table th {
-  padding: 0;
+.link-pagina ul {
+  padding: 0px 16px;
+  font-size: 0.756rem;
 }
 
-.grid-4-vertical {
+.grid-principal {
   display: grid;
-  grid-template-rows: 0.5fr 320px 0.5fr 1fr;
-  row-gap: 10px;
+  grid-template-areas: "header header header header header header" "menu principal principal principal principal principal";
+  grid-template-rows: minmax(0px, 10vh) minmax(90vh, -webkit-max-content);
+  grid-template-rows: minmax(0px, 10vh) minmax(90vh, max-content);
+  grid-template-columns: [menu] 22vw;
+}
+
+.gridHeader {
+  grid-area: header;
+}
+
+.gridMenu {
+  grid-area: menu;
+}
+
+.gridPrincipal {
+  grid-area: principal;
+  padding: 26px 16px;
+}
+
+.border-bottom-conselho {
+  border-bottom: 1px solid black;
+}
+
+.border-right-conselho {
+  border-right: 1px solid black;
+}
+
+.section-user {
+  height: 100px;
+}
+
+.section-user h1 {
+  line-height: 100px;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.font-tomorrow {
+  font-family: "Tomorrow", sans-serif;
 }
 

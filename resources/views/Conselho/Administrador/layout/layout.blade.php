@@ -22,59 +22,51 @@
     {{-- font awesome icons --}}
 
 </head>
-<body>
-    <header class="topo-pagina-conselho">
-        <div>
+<body class="grid-principal p-0 m-0">
+    <header class="gridHeader header bg-azul-conselho font-1rem">
+        <div class="d-flex p-0 m-0">
             <img src="/conselho/_imagens/logo.png" alt="logo do sistema">
-            <h1>conselho de classes</h1>
+            <h1 class="m-0 ml-1 text-uppercase">conselho de classes</h1>
         </div>
     </header>
-
-    <div class="grid-principal-conselho">
-        <div class="menu-principal">
-            <div>
-                <section>
-                    <h1>Usuário</h1>
-                </section>
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <div>
-                                <a class="link" href="">Turma
-                                    <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="link" href="">Importar planilha</a>
-                        </li>
-                        <li>
-                            <a class="link" href="">Visualizar alunos</a>
-                        </li>
-                        <li>
-                            <a class="link" href="">Gerenciar turmas</a>
-                        </li>
-                        <li>
-                            <a class="link" href="">Bimestre</a>
-                        </li>
-                        <li>
-                            <a class="link" href="">Sair</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="gridMenu p-0 m-0 border-right-conselho font-tomorrow">
+        <div class="border-bottom-conselho section-user">
+            <section>
+                <h1 class="m-0 p-0">Usuário</h1>
+            </section>
         </div>
         <div>
-            <main>
-
-                <h1 id="titulo-conselho" style="text-align: center; font-size: 1rem; font-weight: bold; font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
-
-                @yield('main-page')
-
-            </main>
+            <nav class="link-pagina">
+                <ul>
+                    <li class="">
+                        <a class="" href="">Turma
+                            <i class="fas fa-plus-circle link-a"></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="" href="">Importar planilha</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="">Visualizar alunos</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="">Gerenciar turmas</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="">Bimestre</a>
+                    </li>
+                    <li class="">
+                        <a class="" href="">Sair</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </div>
+    <div class="gridPrincipal">
+        <main>
+            <h1 id="titulo-conselho" style="text-align: center; font-size: 1rem; font-weight: bold;font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
+            @yield('main-page')
+        </main>
     </div>
     {{-- bootstrap e jquery --}}
     <script src="{{ asset('conselho/js/jquery.js') }}"></script>
