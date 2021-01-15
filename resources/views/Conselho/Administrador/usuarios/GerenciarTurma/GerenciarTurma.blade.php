@@ -62,9 +62,9 @@
       <div class="modal-body">
         Deseja realmente Ativar essa turma?
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Nao</button>
-        <button type="button" class="btn btn-primary btn-sm ">Sim</button>
+      <div class="modal-footer justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
       </div>
     </div>
   </div>

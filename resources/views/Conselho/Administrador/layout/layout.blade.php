@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('conselho/css/style.css') }}">
-
+    <script src="{{ asset('conselho/js/bootstrap.js') }}"></script>
     <!-- fonte Viga -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
