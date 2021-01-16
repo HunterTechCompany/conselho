@@ -18050,7 +18050,7 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/ConselhoDeClasse/conselho/node_modules/bootstrap/dist/js/bootstrap.bundle.js */"./node_modules/bootstrap/dist/js/bootstrap.bundle.js");
+module.exports = __webpack_require__(/*! /home/laravel/Downloads/conselho/node_modules/bootstrap/dist/js/bootstrap.bundle.js */"./node_modules/bootstrap/dist/js/bootstrap.bundle.js");
 
 
 /***/ })

@@ -14,6 +14,4 @@ const mix = require('laravel-mix');
 mix
     .js('node_modules/jquery/dist/jquery.js', 'public/conselho/js/jquery.js')
     .js('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/conselho/js/bootstrap.js')
-    .sass('resources/views/Conselho/global/style.scss', 'public/conselho/css/style.css')
-
-    .js('resources/views/Conselho/global/script.js', 'public/conselho/js/global.js');
+    .sass('resources/views/Conselho/global/style.scss', 'public/conselho/css/style.css');

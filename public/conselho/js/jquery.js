@@ -10988,8 +10988,8 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/ConselhoDeClasse/conselho/node_modules/jquery/dist/jquery.js */"./node_modules/jquery/dist/jquery.js");
-module.exports = __webpack_require__(/*! /var/www/html/ConselhoDeClasse/conselho/resources/views/Conselho/global/style.scss */"./resources/views/Conselho/global/style.scss");
+__webpack_require__(/*! /home/laravel/Downloads/conselho/node_modules/jquery/dist/jquery.js */"./node_modules/jquery/dist/jquery.js");
+module.exports = __webpack_require__(/*! /home/laravel/Downloads/conselho/resources/views/Conselho/global/style.scss */"./resources/views/Conselho/global/style.scss");
 
 
 /***/ })

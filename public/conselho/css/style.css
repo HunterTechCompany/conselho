@@ -1,88 +1,5 @@
 @charset "UTF-8";
 
-html {
-  font-size: 36px;
-}
-
-.topo-pagina-conselho {
-  width: 100%;
-  background-color: #0B12BD;
-}
-
-.topo-pagina-conselho div {
-  display: flex;
-  width: 96%;
-  min-width: 425px;
-  margin: auto;
-  height: 10vh;
-}
-
-.topo-pagina-conselho h1 {
-  margin: 0 8px;
-  line-height: 10vh;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Viga", sans-serif;
-  text-transform: uppercase;
-  color: white;
-}
-
-.topo-pagina-conselho img {
-  margin: 0 8px;
-  line-height: 62px;
-  width: 52px;
-}
-
-.grid-principal-conselho {
-  display: grid;
-  grid-template-columns: 2fr 10fr;
-  grid-template-rows: 90vh;
-}
-
-.menu-principal {
-  border-right: 1px solid #1d1d1d;
-  font-family: "Tomorrow", sans-serif;
-}
-
-.menu-principal > div:first-child {
-  border-bottom: 1px solid #1d1d1d;
-  height: 72px;
-}
-
-.menu-principal > div:first-child h1 {
-  font-size: 0.875rem;
-  text-align: center;
-  line-height: 72px;
-}
-
-.menu-principal ul {
-  padding-left: 12px;
-  padding-right: 12px;
-  margin: 0;
-}
-
-.menu-principal li {
-  list-style: none;
-  margin: 12px 0;
-}
-
-.menu-principal li > div {
-  display: flex;
-}
-
-.menu-principal li > div svg {
-  margin-left: 18px;
-}
-
-.menu-principal li a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-  font-size: 0.625rem;
-  transition: all 0.4s;
-}
-
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -112,7 +29,6 @@ html {
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
-  --azul-conselho: #0B12BD;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -2085,28 +2001,6 @@ pre code {
   background-color: #b9bbbe;
 }
 
-.table-azul-conselho,
-.table-azul-conselho > th,
-.table-azul-conselho > td {
-  background-color: #bbbded;
-}
-
-.table-azul-conselho th,
-.table-azul-conselho td,
-.table-azul-conselho thead th,
-.table-azul-conselho tbody + tbody {
-  border-color: #8084dd;
-}
-
-.table-hover .table-azul-conselho:hover {
-  background-color: #a7a9e8;
-}
-
-.table-hover .table-azul-conselho:hover > td,
-.table-hover .table-azul-conselho:hover > th {
-  background-color: #a7a9e8;
-}
-
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -3100,47 +2994,6 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
-.btn-azul-conselho {
-  color: #fff;
-  background-color: #0B12BD;
-  border-color: #0B12BD;
-}
-
-.btn-azul-conselho:hover {
-  color: #fff;
-  background-color: #090f99;
-  border-color: #080d8d;
-}
-
-.btn-azul-conselho:focus,
-.btn-azul-conselho.focus {
-  color: #fff;
-  background-color: #090f99;
-  border-color: #080d8d;
-  box-shadow: 0 0 0 0.2rem rgba(48, 54, 199, 0.5);
-}
-
-.btn-azul-conselho.disabled,
-.btn-azul-conselho:disabled {
-  color: #fff;
-  background-color: #0B12BD;
-  border-color: #0B12BD;
-}
-
-.btn-azul-conselho:not(:disabled):not(.disabled):active,
-.btn-azul-conselho:not(:disabled):not(.disabled).active,
-.show > .btn-azul-conselho.dropdown-toggle {
-  color: #fff;
-  background-color: #080d8d;
-  border-color: #070c81;
-}
-
-.btn-azul-conselho:not(:disabled):not(.disabled):active:focus,
-.btn-azul-conselho:not(:disabled):not(.disabled).active:focus,
-.show > .btn-azul-conselho.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(48, 54, 199, 0.5);
-}
-
 .btn-outline-primary {
   color: #007bff;
   border-color: #007bff;
@@ -3427,42 +3280,6 @@ fieldset:disabled a.btn {
 .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-}
-
-.btn-outline-azul-conselho {
-  color: #0B12BD;
-  border-color: #0B12BD;
-}
-
-.btn-outline-azul-conselho:hover {
-  color: #fff;
-  background-color: #0B12BD;
-  border-color: #0B12BD;
-}
-
-.btn-outline-azul-conselho:focus,
-.btn-outline-azul-conselho.focus {
-  box-shadow: 0 0 0 0.2rem rgba(11, 18, 189, 0.5);
-}
-
-.btn-outline-azul-conselho.disabled,
-.btn-outline-azul-conselho:disabled {
-  color: #0B12BD;
-  background-color: transparent;
-}
-
-.btn-outline-azul-conselho:not(:disabled):not(.disabled):active,
-.btn-outline-azul-conselho:not(:disabled):not(.disabled).active,
-.show > .btn-outline-azul-conselho.dropdown-toggle {
-  color: #fff;
-  background-color: #0B12BD;
-  border-color: #0B12BD;
-}
-
-.btn-outline-azul-conselho:not(:disabled):not(.disabled):active:focus,
-.btn-outline-azul-conselho:not(:disabled):not(.disabled).active:focus,
-.show > .btn-outline-azul-conselho.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(11, 18, 189, 0.5);
 }
 
 .btn-link {
@@ -5661,23 +5478,6 @@ a.badge-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
-.badge-azul-conselho {
-  color: #fff;
-  background-color: #0B12BD;
-}
-
-a.badge-azul-conselho:hover,
-a.badge-azul-conselho:focus {
-  color: #fff;
-  background-color: #080d8d;
-}
-
-a.badge-azul-conselho:focus,
-a.badge-azul-conselho.focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(11, 18, 189, 0.5);
-}
-
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -5836,20 +5636,6 @@ a.badge-azul-conselho.focus {
 
 .alert-dark .alert-link {
   color: #040505;
-}
-
-.alert-azul-conselho {
-  color: #060962;
-  background-color: #ced0f2;
-  border-color: #bbbded;
-}
-
-.alert-azul-conselho hr {
-  border-top-color: #a7a9e8;
-}
-
-.alert-azul-conselho .alert-link {
-  color: #030532;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -6288,23 +6074,6 @@ a.badge-azul-conselho.focus {
   color: #fff;
   background-color: #1b1e21;
   border-color: #1b1e21;
-}
-
-.list-group-item-azul-conselho {
-  color: #060962;
-  background-color: #bbbded;
-}
-
-.list-group-item-azul-conselho.list-group-item-action:hover,
-.list-group-item-azul-conselho.list-group-item-action:focus {
-  color: #060962;
-  background-color: #a7a9e8;
-}
-
-.list-group-item-azul-conselho.list-group-item-action.active {
-  color: #fff;
-  background-color: #060962;
-  border-color: #060962;
 }
 
 .close {
@@ -7273,17 +7042,6 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
-.bg-azul-conselho {
-  background-color: #0B12BD !important;
-}
-
-a.bg-azul-conselho:hover,
-a.bg-azul-conselho:focus,
-button.bg-azul-conselho:hover,
-button.bg-azul-conselho:focus {
-  background-color: #080d8d !important;
-}
-
 .bg-white {
   background-color: #fff !important;
 }
@@ -7362,10 +7120,6 @@ button.bg-azul-conselho:focus {
 
 .border-dark {
   border-color: #343a40 !important;
-}
-
-.border-azul-conselho {
-  border-color: #0B12BD !important;
 }
 
 .border-white {
@@ -11006,15 +10760,6 @@ a.text-dark:focus {
   color: #121416 !important;
 }
 
-.text-azul-conselho {
-  color: #0B12BD !important;
-}
-
-a.text-azul-conselho:hover,
-a.text-azul-conselho:focus {
-  color: #070b75 !important;
-}
-
 .text-body {
   color: #212529 !important;
 }
@@ -11157,4 +10902,92 @@ a.text-azul-conselho:focus {
     border-color: #dee2e6;
   }
 }
+/*
+html {
+  font-size: 36px;
+}*/
 
+.topo-pagina-conselho {
+  width: 100%;
+  background-color: #0B12BD;
+}
+
+.topo-pagina-conselho div {
+  display: flex;
+  width: 96%;
+  min-width: 425px;
+  margin: auto;
+  height: 10vh;
+}
+
+.topo-pagina-conselho h1 {
+  margin: 0 8px;
+  line-height: 10vh;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "Viga", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.topo-pagina-conselho img {
+  margin: 0 8px;
+  line-height: 62px;
+  width: 52px;
+}
+
+.grid-principal-conselho {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 90vh;
+}
+
+.menu-principal {
+  border-right: 1px solid #1d1d1d;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.menu-principal > div:first-child {
+  border-bottom: 1px solid #1d1d1d;
+  height: 72px;
+}
+
+.menu-principal > div:first-child h1 {
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 72px;
+}
+
+.menu-principal ul {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0;
+}
+
+.menu-principal li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.menu-principal li > div {
+  display: flex;
+}
+
+.menu-principal li > div svg {
+  margin-left: 18px;
+}
+
+.menu-principal li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.imagem-tabela{
+  width: 35px;
+  height: 35px;
+}
+
+html *{
+  font-family: 'Tomorrow', sans-serif;
+}

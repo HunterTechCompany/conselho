@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('conselho/css/style.css') }}">
-
+    <script src="{{ asset('conselho/js/bootstrap.js') }}"></script>
     <!-- fonte Viga -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
         <div class="menu-principal">
             <div>
                 <section>
-                    <h1>Usuário</h1>
+                    <h1>Fulano de tal</h1>
                 </section>
             </div>
             <div>
@@ -36,11 +36,10 @@
                     <ul>
                         <li>
                             <div>
-                                <a href="">Turma
-                                    <svg width="20px" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                                    </svg>
-                                </a>
+                                <a href="">Turma</a>
+                                <svg width="20px" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                </svg>
                             </div>
                         </li>
                         <li>
@@ -64,14 +63,9 @@
         </div>
         <div>
             <main>
-                <h1 style="text-align: center; font-size: 1rem; font-weight: bold; font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
+                @yield('content')
             </main>
         </div>
     </div>
-
-    <script src="{{ asset('conselho/js/jquery.js') }}"></script>
-    <script src="{{ asset('conselho/js/bootstrap.js') }}"></script>
-
-    <script src="{{ asset('conselho/js/global.js') }}"></script>
 </body>
 </html>
