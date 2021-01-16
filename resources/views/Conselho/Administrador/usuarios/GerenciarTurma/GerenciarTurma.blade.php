@@ -3,7 +3,7 @@
 @section('content')
 <div class="conteiner-fluid">
   <div class="row justify-content-center">
-    <h1>Gerenciar Turma</h1>
+    <h1 style="font-weight: bold; font-family: 'Tomorrow', sans-serif;">Gerenciar Turma</h1>
 </div>
 <div class="row"> 
         <div class="col-md-4 offset-md-8">

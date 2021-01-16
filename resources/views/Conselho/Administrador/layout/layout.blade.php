@@ -28,7 +28,7 @@
         <div class="menu-principal">
             <div>
                 <section>
-                    <h1>Usuário</h1>
+                    <h1>Fulano de tal</h1>
                 </section>
             </div>
             <div>

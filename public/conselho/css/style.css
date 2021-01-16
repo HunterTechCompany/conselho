@@ -10924,7 +10924,7 @@ html {
   margin: 0 8px;
   line-height: 10vh;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: "Viga", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -10986,4 +10986,8 @@ html {
 .imagem-tabela{
   width: 35px;
   height: 35px;
+}
+
+html *{
+  font-family: 'Tomorrow', sans-serif;
 }
