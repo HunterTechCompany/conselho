@@ -17,33 +17,39 @@ Route::get('/', function () {
     return view('Conselho/Administrador/layout/layout');
 });
 
-//Rotas-Marcos
+
 Route::get('/ge', function () {
-    return view('Conselho/Administrador/usuarios/GerenciarTurma/GerenciarTurmaEspecifica');
+    return view('Conselho/Administrador/usuarios/GerenciarTurmaEspecifica/GerenciarTurmaEspecifica');
 });
+
+Route::get('/gerenciarturma', function () {
+    return view('Conselho/Administrador/usuarios/GerenciarTurma/GerenciarTurma');
+});
+
 Route::get('/editarturma', function () {
-    return view('Conselho/Administrador/usuarios/editar/EditarTurma');
+    return view('Conselho/Administrador/usuarios/EditarTurma/EditarTurma');
 });
 
 Route::get('/usuario', function () {
     return view('Conselho/Administrador/usuarios/Usuario/Usuarios');
 });
+
 Route::get('/adicionarusuario', function () {
-    return view('Conselho/Administrador/usuarios/Usuario/AdicionarNovoUsuario');
+    return view('Conselho/Administrador/usuarios/AdicionarUsuario/AdicionarNovoUsuario');
 });
+
 Route::get('/editarusuario', function () {
-    return view('Conselho/Administrador/usuarios/editar/EditarUsuario');
+    return view('Conselho/Administrador/usuarios/EditarUsuario/EditarUsuario');
 });
+
 Route::get('/curso', function () {
     return view('Conselho/Administrador/usuarios/Curso/Cursos');
 });
-Route::get('/gerenciarturma', function () {
-    return view('Conselho/Administrador/usuarios/GerenciarTurma/GerenciarTurma');
-});
+
 Route::get('/editarcurso', function () {
-    return view('Conselho/Administrador/usuarios/editar/EditarCurso');
+    return view('Conselho/Administrador/usuarios/EditarCurso/EditarCurso');
 });
 
 Route::get('/adicionarcurso', function () {
-    return view('Conselho/Administrador/usuarios/Curso/AdicionarNovoCurso');
+    return view('Conselho/Administrador/usuarios/AdicionarCurso/AdicionarNovoCurso');
 });
