@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/teste', function(){
     return view("Conselho.Administrador.Atendimentos.tipos_de_atendimentos.tipos");
 });
+
+Route::get('/teste2', function(){
+    return view("Conselho.Administrador.Atendimentos.criar&editar_atendimentos.criar&editar");
+});

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=Tomorrow&display=swap);@import url(https://fonts.googleapis.com/css2?family=Viga&display=swap);@charset "UTF-8";
 
 html {
   font-size: 36px;
@@ -11174,5 +11174,206 @@ html * {
 
 .font-tomorrow {
   font-family: "Tomorrow", sans-serif;
+}
+
+.font-nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.font-size-756 {
+  font-size: 0.756rem;
+}
+
+.font-size-658 {
+  font-size: 0.658rem;
+}
+
+.font-size-542 {
+  font-size: 0.542rem;
+}
+
+.Buscador {
+  width: 50%;
+  height: 36px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.565rem;
+  padding: 2px 6px;
+}
+
+.Buscador:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.Selecao {
+  height: 36px;
+  background: none;
+  -webkit-appearance: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 0.565rem;
+}
+
+main {
+  height: 100%;
+}
+
+.botao-editar {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0px;
+  color: black;
+  border-radius: 5px;
+  background-color: #44C4A1;
+}
+
+.botao-editar:hover {
+  color: whitesmoke;
+  position: relative;
+  top: 3px;
+  transition: all 0.4s;
+}
+
+.botao-excluir {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 10px 0px;
+  color: black;
+  border-radius: 5px;
+  background-color: #FF0000;
+}
+
+.botao-excluir:hover {
+  color: whitesmoke;
+  position: relative;
+  top: 3px;
+  transition: 0.4s;
+}
+
+.p-tipos-atendimentos {
+  height: 100%;
+}
+
+.tabela-tipos-atendimentos {
+  height: 56%;
+}
+
+.grid-tabela-tipos-atendimentos {
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
+}
+
+.item-tipo-atendimento {
+  margin-left: 12px;
+  margin-bottom: 0 !important;
+  line-height: 60px;
+}
+
+.botao-adicionar-tipo-atendimento {
+  background-color: #3a556a;
+  position: absolute;
+  margin-left: 62px;
+  height: 42px;
+  width: 142px;
+  line-height: 42px;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.botao-adicionar-tipo-atendimento:hover {
+  color: whitesmoke;
+  background-color: #193b55;
+  text-decoration: none;
+}
+
+.controle-de-paginas {
+  text-align: center;
+  border-radius: 5px;
+  height: 42px;
+  border: 1px solid black;
+  background-color: rgba(196, 196, 196, 0.54);
+  margin: auto;
+  display: flex;
+}
+
+.controle-de-paginas span {
+  display: block;
+  height: 100%;
+  width: 32px;
+  background-color: #0B12BD;
+  color: whitesmoke;
+}
+
+.controle-de-paginas a {
+  display: block;
+  height: 100%;
+  padding: 0 6px;
+  transition: all 0.4s;
+  color: black;
+}
+
+.controle-de-paginas a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: #b9b9b9;
+}
+
+.controle-de-paginas div:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+
+.controle-de-paginas div:last-child a {
+  border-radius: 0 5px 5px 0;
+}
+
+.botao-voltar {
+  display: block;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #27A2DB;
+  transition: all 0.4s;
+  width: 126px;
+  text-align: center;
+}
+
+.botao-voltar svg {
+  margin-right: 10px;
+}
+
+.botao-voltar:hover {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #1d7ba7;
+}
+
+.botao-salvar {
+  display: block;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: #319303;
+  transition: all 0.4s;
+  width: 126px;
+  text-align: center;
+}
+
+.botao-salvar:hover {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #297c02;
 }
 

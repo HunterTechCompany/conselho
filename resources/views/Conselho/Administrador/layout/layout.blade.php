@@ -7,16 +7,6 @@
     <title>Conselho de Classes</title>
     <link rel="stylesheet" href="{{ asset('conselho/css/style.css') }}">
 
-    <!-- fonte Viga -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-    {{-- fonte Viga --}}
-
-    <!-- fonte Tomorrow -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
-    {{-- fonte Tomorrow --}}
-
     {{-- font awesome icons --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     {{-- font awesome icons --}}
@@ -63,8 +53,8 @@
         </div>
     </div>
     <div class="gridPrincipal">
-        <main>
-            <h1 id="titulo-conselho" style="text-align: center; font-size: 1rem; font-weight: bold;font-family: 'Tomorrow', sans-serif;">Sistema Conselho de Classes</h1>
+        <main class="font-tomorrow">
+            <h1 id="titulo-conselho" class="titulo-pagina">Sistema Conselho de Classes</h1>
             @yield('main-page')
         </main>
     </div>

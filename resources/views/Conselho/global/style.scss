@@ -1,4 +1,7 @@
 // Adicionais para o projeto
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap'); //Nunito sans font
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap'); //Tomorrow font
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap'); //Viga font
 
 html {
     font-size: 36px;
@@ -96,3 +99,88 @@ html * {
 .font-tomorrow {
     font-family: 'Tomorrow', sans-serif;
 }
+
+.font-nunito-sans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.titulo-pagina {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.font-size-756 {
+    font-size: 0.756rem;
+}
+
+.font-size-658 {
+    font-size: 0.658rem;
+}
+
+.font-size-542 {
+    font-size: 0.542rem;
+}
+
+.Buscador {
+    width: 50%;
+    height: 36px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.565rem;
+    padding: 2px 6px;
+    &:focus {
+        outline: none;
+        border: 1px solid black;
+    }
+}
+
+.Selecao {
+    height: 36px;
+    background: none;
+    -webkit-appearance: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 0.565rem;
+}
+
+main {
+    height: 100%
+}
+
+.botao-editar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+    color: black;
+    border-radius: 5px;
+    background-color: #44C4A1;
+    &:hover {
+        color: whitesmoke;
+        position: relative;
+        top: 3px;
+        transition: all 0.4s;
+    }
+}
+
+.botao-excluir {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+    color: black;
+    border-radius: 5px;
+    background-color: #FF0000;
+    &:hover {
+        color: whitesmoke;
+        position: relative;
+        top: 3px;
+        transition: 0.4s
+    }
+}
+// atendimentos - tipos_de_atendimentos
+@import "../Administrador/Atendimentos/tipos_de_atendimentos/scss/style.scss";
+
+@import "../Administrador/Atendimentos/criar&editar_atendimentos/scss/style.scss";
