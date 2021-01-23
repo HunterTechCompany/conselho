@@ -11377,3 +11377,13 @@ main {
   background-color: #297c02;
 }
 
+.grid-tabela-disciplinas {
+  display: grid;
+  grid-template-columns: 40% 40% 10% 10%;
+}
+
+.grid-disciplinas-add {
+  display: grid;
+  grid-template-columns: 32% 60%;
+}
+
