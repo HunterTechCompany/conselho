@@ -43,13 +43,13 @@
                             </div>
                         </li>
                         <li>
-                            <a href="">Importar planilha</a>
+                            <a href="{{url('/importarplanilha')}}">Importar planilha</a>
                         </li>
                         <li>
                             <a href="">Visualizar alunos</a>
                         </li>
                         <li>
-                            <a href="">Gerenciar turmas</a>
+                            <a href="{{url('/gerenciarturma')}}">Gerenciar turmas</a>
                         </li>
                         <li>
                             <a href="">Bimestre</a>

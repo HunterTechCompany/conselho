@@ -17,8 +17,7 @@ Route::get('/', function () {
     return view('Conselho/Administrador/layout/layout');
 });
 
-
-Route::get('/ge', function () {
+Route::get('/gerenciarturmaespecifica', function () {
     return view('Conselho/Administrador/usuarios/GerenciarTurmaEspecifica/GerenciarTurmaEspecifica');
 });
 
@@ -52,4 +51,34 @@ Route::get('/editarcurso', function () {
 
 Route::get('/adicionarcurso', function () {
     return view('Conselho/Administrador/usuarios/AdicionarCurso/AdicionarNovoCurso');
+});
+
+//Coordenador:
+
+Route::get('/visualizaralunos', function () {
+    return view('Conselho/Coordenador/VisualizarAlunos/VisualizarAlunos');
+});
+
+Route::get('/adicionaraluno', function () {
+    return view('Conselho/Coordenador/AdicionarAluno/AdicionarAluno');
+});
+
+Route::get('/detalhesaluno', function () {
+    return view('Conselho/Coordenador/DetalhesAluno/DetalhesAluno');
+});
+
+Route::get('/editaraluno', function () {
+    return view('Conselho/Coordenador/EditarAluno/EditarAluno');
+});
+
+Route::get('/anotacoesturma', function () {
+    return view('Conselho/Coordenador/AnotacoesTurma/AnotacoesTurma');
+});
+
+Route::get('/importarplanilha', function () {
+    return view('Conselho/Coordenador/ImportarPlanilha/ImportarPlanilha');
+});
+
+Route::get('/gerenciaralunos', function () {
+    return view('Conselho/Coordenador/GerenciarAlunos/GerenciarAlunos');
 });

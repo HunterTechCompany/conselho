@@ -6,7 +6,7 @@
         </h1>
     </div>
     <div>
-        <a class="btn btn-primary btn-md" style="margin: 5px" href=" "><img src="/conselho/_imagens/voltar.svg" alt="">Voltar</a>
+        <a class="btn btn-primary btn-md" style="margin: 5px" href="{{url('/curso')}}"><img src="/conselho/_imagens/voltar.svg" alt="">Voltar</a>
     </div>
     <form>
         <div class="form-group row">

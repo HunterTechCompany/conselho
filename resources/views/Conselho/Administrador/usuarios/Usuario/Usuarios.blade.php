@@ -26,7 +26,7 @@
             <tr>
                 <td>Weider Pereira Rodrigues</td>
                 <td>weider@cefetmg.br</td>
-                <td><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></td>
+                <td><a href="{{url('/editarusuario')}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
                 <td><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                   <img class="imagem-tabela" src="/conselho/_imagens/Excluir.svg" alt=""></button></td>
             </tr>
@@ -46,7 +46,7 @@
             </tr>
         </tbody>
     </table>
-    <a class="btn btn-secondary btn-md" style="margin: 5px" href=" ">Novo Usuario</a>
+    <a class="btn btn-secondary btn-md" style="margin: 5px" href="{{url('/adicionarusuario')}}">Novo Usuario</a>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,7 +1,7 @@
 @extends('Conselho.Administrador.layout.layout') @section('content')
 <div class="conteiner-fluid" style="margin: 10px">
     <div>
-        <a class="btn btn-primary btn-md" style="margin: 5px" href=" "
+        <a class="btn btn-primary btn-md" style="margin: 5px" href="{{url('/usuario')}}"
             ><img src="/conselho/_imagens/voltar.svg" alt="" />Voltar</a
         >
     </div>

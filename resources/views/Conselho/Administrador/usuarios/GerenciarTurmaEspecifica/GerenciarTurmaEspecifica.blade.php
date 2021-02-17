@@ -3,7 +3,7 @@
 @section('content')
 <div class="conteiner-fluid">
     <div>
-        <a class="btn btn-primary btn-md" style="margin: 5px" href=" "><img src="/conselho/_imagens/voltar.svg" alt="">Voltar</a>
+        <a class="btn btn-primary btn-md" style="margin: 5px" href="{{url('/gerenciarturma')}}"><img src="/conselho/_imagens/voltar.svg" alt="">Voltar</a>
     </div>
     <div class="row justify-content-center">
         <h1 style="font-weight: bold; font-family: 'Tomorrow', sans-serif;">1º Informática-2019</h1>

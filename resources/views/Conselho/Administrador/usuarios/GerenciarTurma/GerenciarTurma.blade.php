@@ -29,8 +29,8 @@
                 <td>Informática</td>
                 <td>INT</td>
                 <td>2020</td>
-                <td><img class="imagem-tabela" src="/conselho/_imagens/Gerenciar.svg" alt=""></td>
-                <td><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></td>
+                <td><a href="{{url('/gerenciarturmaespecifica')}}"><img class="imagem-tabela" src="/conselho/_imagens/Gerenciar.svg" alt=""></a></td>
+                <td><a href="{{url('/editarturma')}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
                 <td><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                   <img class="imagem-tabela" src="/conselho/_imagens/Ativar.svg" alt=""></button></td>
             </tr>
