@@ -82,3 +82,19 @@ Route::get('/importarplanilha', function () {
 Route::get('/gerenciaralunos', function () {
     return view('Conselho/Coordenador/GerenciarAlunos/GerenciarAlunos');
 });
+
+Route::get('/selecaoturmas', function () {
+    return view('Conselho/Coordenador/SelecaoTurmas/SelecaoTurmas');
+});
+
+Route::get('/desempenhodisciplina', function () {
+    return view('Conselho/Coordenador/DesempenhoDisciplina/DesempenhoDisciplina');
+});
+
+Route::get('/desempenhoturma', function () {
+    return view('Conselho/Coordenador/DesempenhoTurma/DesempenhoTurma');
+});
+
+Route::get('/evasaoturma', function () {
+    return view('Conselho/Coordenador/EvasaoTurma/EvasaoTurma');
+});
