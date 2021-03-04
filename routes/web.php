@@ -71,9 +71,13 @@ Route::get('/editaraluno', function () {
     return view('Conselho/Coordenador/EditarAluno/EditarAluno');
 });
 
-Route::get('/anotacoesturma', function () {
-    return view('Conselho/Coordenador/AnotacoesTurma/AnotacoesTurma');
+Route::post('/salvar',[App\Http\Controllers\AnotacaoTurmaController::class, 'store'])->name('anotacoesturma');
+Route::get('/anotacoesturma',[App\Http\Controllers\AnotacaoTurmaController::class, 'index']);
+
+Route::get('/adicionaranotacao', function () {
+    return view('Conselho/Coordenador/AnotacoesTurma/AdicionarAnotacao');
 });
+
 
 Route::get('/importarplanilha', function () {
     return view('Conselho/Coordenador/ImportarPlanilha/ImportarPlanilha');

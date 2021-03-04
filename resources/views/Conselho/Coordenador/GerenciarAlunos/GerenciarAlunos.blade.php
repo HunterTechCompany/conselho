@@ -9,6 +9,12 @@
         <a class="btn btn-primary btn-md" style="margin: 5px" href="{{url('/visualizaralunos')}}"
             ><img src="/conselho/_imagens/voltar.svg" alt="" />Voltar</a>
     </div>
+    <div class="row"> 
+        <div class="col-md-4 offset-md-8">
+            <label for="buscar"><strong>Busca:</strong></label>
+            <input type="text" name="buscar">
+        </div>
+    </div>
 </div><br>
 <div class="table-responsive">
     <table class="table">
@@ -21,12 +27,13 @@
         </thead>
         <tbody>
             <tr>
-                <td><input type="radio"></td>
+                <td><input type="checkbox"></td>
                 <td>2018181100</td>
                 <td>Pelé</td>
             </tr>
         </tbody>
     </table>
+</div>
     <button class="btn btn-primary">Marcar Todos</button>
     <form action="">
     <div class="justify-content-center row">

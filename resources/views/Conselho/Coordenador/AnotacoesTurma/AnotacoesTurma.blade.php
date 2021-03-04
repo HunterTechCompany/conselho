@@ -26,17 +26,24 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($dados as $item)
             <tr>
-                <td>2018181100</td>
+                <td>{{$item->anotacao}}</td>
                 <td><a href="{{url('/editarturma')}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
                 <td><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                   <img class="imagem-tabela" src="/conselho/_imagens/Excluir.svg" alt=""></button></td>
             </tr>
+            @endforeach
         </tbody>
     </table>
-    <div>
-        <a class="btn btn-secondary btn-md"href="">Adicionar</a>
     </div>
+    <div class="justify-content-center row">
+        {{ $dados->links() }}
+    </div>
+    <div style="margin: 5px">
+        <a class="btn btn-secondary btn-md"href="{{url('/adicionaranotacao')}}">Adicionar</a>
+    </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
