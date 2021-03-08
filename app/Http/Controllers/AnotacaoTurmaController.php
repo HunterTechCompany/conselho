@@ -30,4 +30,34 @@ class AnotacaoTurmaController extends Controller
         $dados -> save();
         return redirect("/anotacoesturma");
     }
+
+    public function destroy($id)
+    {
+        $dados = Anotacao_turma::find($id);
+        if( isset($dados)){
+          $dados->delete () ;
+             }else{
+             return response("anotação não encontrada", 404) ;
+            }
+             return redirect("/anotacoesturma");
+    }
+
+    public function edit($id)
+    {
+        $dados = Anotacao_turma::find( $id );
+        $anotacao= Anotacao_turma::all();
+        if ( isset ( $dados ))
+            return view ('Conselho/Coordenador/AnotacoesTurma/EditarAnotacao',compact("dados"));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $dados = Anotacao_turma::find($id);
+        if( isset ($dados) ){
+            $dados -> anotacao = $request -> input ("anotacao");
+            $dados -> id_turma = 2;
+            $dados -> save();
+        }      
+        return redirect('/anotacoesturma');
+    }
 }

@@ -59,9 +59,8 @@ Route::get('/visualizaralunos', function () {
     return view('Conselho/Coordenador/VisualizarAlunos/VisualizarAlunos');
 });
 
-Route::get('/adicionaraluno', function () {
-    return view('Conselho/Coordenador/AdicionarAluno/AdicionarAluno');
-});
+Route::post('/salvaraluno',[App\Http\Controllers\AdicionarAlunoController::class, 'store'])->name('salvaraluno');
+Route::get('/adicionaraluno',[App\Http\Controllers\AdicionarAlunoController::class, 'index']);
 
 Route::get('/detalhesaluno', function () {
     return view('Conselho/Coordenador/DetalhesAluno/DetalhesAluno');
@@ -71,7 +70,10 @@ Route::get('/editaraluno', function () {
     return view('Conselho/Coordenador/EditarAluno/EditarAluno');
 });
 
+Route::get('/editaranotacao/{id}',[App\Http\Controllers\AnotacaoTurmaController::class, 'edit'])->name('editaranotacao');
+Route::get('/excluir/{id}',[App\Http\Controllers\AnotacaoTurmaController::class, 'destroy'])->name('excluir');
 Route::post('/salvar',[App\Http\Controllers\AnotacaoTurmaController::class, 'store'])->name('anotacoesturma');
+Route::post('/editar/{id}',[App\Http\Controllers\AnotacaoTurmaController::class, 'update'])->name('editar');
 Route::get('/anotacoesturma',[App\Http\Controllers\AnotacaoTurmaController::class, 'index']);
 
 Route::get('/adicionaranotacao', function () {
@@ -83,9 +85,7 @@ Route::get('/importarplanilha', function () {
     return view('Conselho/Coordenador/ImportarPlanilha/ImportarPlanilha');
 });
 
-Route::get('/gerenciaralunos', function () {
-    return view('Conselho/Coordenador/GerenciarAlunos/GerenciarAlunos');
-});
+Route::get('/gerenciaraluno',[App\Http\Controllers\GerenciarAlunoController::class, 'index']);
 
 Route::get('/selecaoturmas', function () {
     return view('Conselho/Coordenador/SelecaoTurmas/SelecaoTurmas');

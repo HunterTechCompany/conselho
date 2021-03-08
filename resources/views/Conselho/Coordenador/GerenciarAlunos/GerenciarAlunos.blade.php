@@ -26,27 +26,37 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($dados as $item)
             <tr>
                 <td><input type="checkbox"></td>
-                <td>2018181100</td>
-                <td>Pelé</td>
+                <td>{{$item->matricula}}</td>
+                <td>{{$item->nome}}</td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
-    <button class="btn btn-primary">Marcar Todos</button>
-    <form action="">
     <div class="justify-content-center row">
-            <div >
-                <select name="" id="">
-                    <option value="">1 Informática-2020</option>
-                </select>
-            </div>
-        </div><br>
+        {{$dados->links()}}
+    </div>
+    <div>
+        <button class="btn btn-primary">Marcar Todos</button>
+    </div>
+    <div>
+        <form action="">
         <div class="justify-content-center row">
-                <button name="submit" type="submit" class="btn btn-success">
-                    Enviar
-                </button>
-        </div>
-    </form>
+                <div >
+                    <select name="" id="">
+                        <option value="">1 Informática-2020</option>
+                    </select>
+                </div>
+            </div><br>
+            <div class="justify-content-center row">
+                    <button name="submit" type="submit" class="btn btn-success">
+                        Enviar
+                    </button>
+            </div>
+        </form>
+    </div>
+
 @endsection

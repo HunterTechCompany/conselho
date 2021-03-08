@@ -29,7 +29,7 @@
             @foreach($dados as $item)
             <tr>
                 <td>{{$item->anotacao}}</td>
-                <td><a href="{{url('/editarturma')}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
+                <td><a href="/editaranotacao/{{$item->id}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
                 <td><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                   <img class="imagem-tabela" src="/conselho/_imagens/Excluir.svg" alt=""></button></td>
             </tr>
@@ -50,11 +50,11 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        Deseja realmente Desativar esse Aluno?
+        Deseja realmente Excluir essa Anotação?
       </div>
       <div class="modal-footer justify-content-between">
-    <button type="button" class="btn btn-primary btn-sm ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        <a class="btn btn-primary btn-sm" href="/excluir/{{$item->id}}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
       </div>
     </div>
   </div>

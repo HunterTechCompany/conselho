@@ -42,7 +42,7 @@
     </table>
     <div style="margin:40px;">
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('adicionaraluno')}}">Novo Aluno</a>
-      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Gerenciar Alunos</a>
+      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('gerenciaraluno')}}">Gerenciar Alunos</a>
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Desempenho Nas Disciplinas</a>
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Desempenho Da Turma</a>
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Evasão da Turma</a>
