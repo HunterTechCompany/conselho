@@ -55,12 +55,18 @@ Route::get('/adicionarcurso', function () {
 
 //Coordenador:
 
-Route::get('/visualizaralunos', function () {
-    return view('Conselho/Coordenador/VisualizarAlunos/VisualizarAlunos');
-});
 
-Route::post('/salvaraluno',[App\Http\Controllers\AdicionarAlunoController::class, 'store'])->name('salvaraluno');
-Route::get('/adicionaraluno',[App\Http\Controllers\AdicionarAlunoController::class, 'index']);
+Route::get('/editaraluno/{matricula}',[App\Http\Controllers\VisualizarAlunoController::class, 'edit'])->name('editaraluno');
+
+Route::get('/excluiraluno/{matricula}',[App\Http\Controllers\VisualizarAlunoController::class, 'destroy'])->name('excluir');
+
+Route::get('/visualizaralunos',[App\Http\Controllers\VisualizarAlunoController::class, 'index']);
+
+Route::post('/salvaraluno',[App\Http\Controllers\VisualizarAlunoController::class, 'store'])->name('salvaraluno');
+
+Route::post('/alunoeditado/{matricula}',[App\Http\Controllers\VisualizarAlunoController::class, 'update'])->name('alunoeditado');
+
+Route::get('/adicionaraluno',[App\Http\Controllers\VisualizarAlunoController::class, 'index2']);
 
 Route::get('/detalhesaluno', function () {
     return view('Conselho/Coordenador/DetalhesAluno/DetalhesAluno');

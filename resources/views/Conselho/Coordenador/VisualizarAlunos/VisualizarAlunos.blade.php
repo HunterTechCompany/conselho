@@ -1,4 +1,4 @@
-@extends('Conselho.Administrador.layout.layout')
+@extends('Conselho.Coordenador.layout.layout')
 
 @section('content')
 <div class="conteiner-fluid">
@@ -27,26 +27,31 @@
             </tr>
         </thead>
         <tbody>
+          @foreach($dados as $item)
             <tr>
-                <td>2018181100</td>
-                <td>Pelé</td>
+                <td>{{$item->matricula}}</td>
+                <td>{{$item->nome}}</td>
                 <td>2</td>
                 <td>90</td>
                 <td>5</td>
-                <td><a href="{{url('/gerenciarturmaespecifica')}}"><img class="imagem-tabela" src="/conselho/_imagens/Ver-Alunos.svg" alt=""></a></td>
-                <td><a href="{{url('/editarturma')}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
+                <td><a href="{{url('/detalhesaluno')}}"><img class="imagem-tabela" src="/conselho/_imagens/Ver-Alunos.svg" alt=""></a></td>
+                <td><a href="/editaraluno/{{$item->matricula}}"><img class="imagem-tabela" src="/conselho/_imagens/Editar.svg" alt=""></a></td>
                 <td><button type="button" class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">
                   <img class="imagem-tabela" src="/conselho/_imagens/Excluir.svg" alt=""></button></td>
             </tr>
+          @endforeach
         </tbody>
     </table>
+    <div class="justify-content-center row">
+        {{ $dados->links() }}
+    </div>
     <div style="margin:40px;">
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('adicionaraluno')}}">Novo Aluno</a>
       <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('gerenciaraluno')}}">Gerenciar Alunos</a>
-      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Desempenho Nas Disciplinas</a>
-      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Desempenho Da Turma</a>
-      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="">Evasão da Turma</a>
-      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('anotacoesturma')}}">Anotações da Turma</a>
+      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('desempenhodisciplina')}}">Desempenho Nas Disciplinas</a>
+      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="{{url('desempenhoturma')}}">Desempenho Da Turma</a>
+      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="evasaoturma">Evasão da Turma</a>
+      <a class="btn btn-md" style="margin:6px; color: black; background-color: #2D93BA" href="/anotacoesturma">Anotações da Turma</a>
     </div>
 </div>
 <!-- Modal -->
@@ -57,7 +62,7 @@
         Deseja realmente Desativar esse Aluno?
       </div>
       <div class="modal-footer justify-content-between">
-    <button type="button" class="btn btn-primary btn-sm ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        <a class="btn btn-primary btn-sm" href="/excluiraluno/{{$item->matricula}}">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
     <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNao&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
       </div>
     </div>

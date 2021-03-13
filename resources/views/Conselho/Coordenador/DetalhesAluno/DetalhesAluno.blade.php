@@ -1,4 +1,4 @@
-@extends('Conselho.Administrador.layout.layout') 
+@extends('Conselho.Coordenador.layout.layout') 
 
 @section('content')
 <div class="conteiner-fluid" style="margin: 10px">

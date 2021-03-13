@@ -1,4 +1,4 @@
-@extends('Conselho.Administrador.layout.layout')
+@extends('Conselho.Coordenador.layout.layout')
 
 @section('content')
 <div class="conteiner-fluid">
@@ -28,7 +28,7 @@
         <tbody>
             @foreach($dados as $item)
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" value="1"></td>
                 <td>{{$item->matricula}}</td>
                 <td>{{$item->nome}}</td>
             </tr>
@@ -40,7 +40,7 @@
         {{$dados->links()}}
     </div>
     <div>
-        <button class="btn btn-primary">Marcar Todos</button>
+        <span class="" style="margin: 12px" role="alert"><input type="checkbox" id="checkTodos" name="checkTodos"> Selecionar Todos</span>
     </div>
     <div>
         <form action="">
@@ -59,4 +59,14 @@
         </form>
     </div>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#checkTodos").click(function(){
+            $('input:checkbox').not(this).prop('checked', this.checked);
+        });
+    </script>
+
+
 @endsection
+

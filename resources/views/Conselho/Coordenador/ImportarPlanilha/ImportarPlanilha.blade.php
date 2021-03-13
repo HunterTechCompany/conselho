@@ -1,4 +1,4 @@
-@extends('Conselho.Administrador.layout.layout')
+@extends('Conselho.Coordenador.layout.layout')
 
 @section('content')
 <div class="conteiner-fluid">
@@ -31,6 +31,7 @@
             </tr>
         </tbody>
     </table>
+</div>
     <div class="row justify-content-center">
         <p>Arquivo não selecionado</p>
     </div>

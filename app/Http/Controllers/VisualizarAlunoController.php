@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Aluno;
 use Illuminate\Http\Request;
 
-class AdicionarAlunoController extends Controller
+class VisualizarAlunoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,7 +23,13 @@ class AdicionarAlunoController extends Controller
     {
         $aluno = Aluno::all();
         $dados = $this->aluno->paginate($this->total);
-        return view ( "Conselho/Coordenador/AdicionarAluno/AdicionarAluno", compact( "dados"));
+        return view ( "Conselho/Coordenador/VisualizarAlunos/VisualizarAlunos", compact( "dados"));
+    }
+
+    public function index2()
+    {
+
+        return view ( "Conselho/Coordenador/AdicionarAluno/AdicionarAluno");
     }
 
     /**
@@ -54,7 +60,7 @@ class AdicionarAlunoController extends Controller
         $dados -> status = 0;
         $dados -> id_turma = $request -> input ("turma");
         $dados -> save();
-        return redirect("/gerenciaraluno");
+        return redirect("/visualizaralunos");
     }
 
     /**
@@ -74,21 +80,39 @@ class AdicionarAlunoController extends Controller
      * @param  \App\Models\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aluno $aluno)
+    public function edit($matricula)
     {
-        //
+        
+        $dados = Aluno::where( "matricula","=",$matricula)->get();
+        if ( isset ( $dados ))
+            return view ('Conselho/Coordenador/EditarAluno/EditarAluno',compact("dados"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Aluno  $aluno
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Aluno $aluno)
+    public function update(Request $request, $matricula)
     {
-        //
+        $dados = Aluno::where("matricula","=",$matricula)->get();
+        if( isset ($dados) ){
+            $matricula = $request["matricula"];
+            $nome = $request["nome"];
+            $email = $request["email"];
+            $telefone = $request["telefone"];
+            $pai = $request["pai"];
+            $mae = $request["mae"];
+            $status = 0;
+            $id_turma = $request["turma"];
+            Aluno::where("matricula","=",$matricula)->update([
+            'matricula'=>$matricula,
+            'nome'=>$nome,
+            'email'=>$email,
+            'telefone'=>$telefone,
+            'pai'=>$pai,
+            'mae'=>$mae,
+            'status'=>$status,
+            'id_turma'=>$id_turma
+        ]
+            );
+        }      
+        return redirect('/visualizaralunos');
     }
 
     /**
@@ -97,8 +121,14 @@ class AdicionarAlunoController extends Controller
      * @param  \App\Models\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aluno $aluno)
+    public function destroy($matricula)
     {
-        //
+        $dados = Aluno::select("matricula")->where( "matricula","=",$matricula)->get();
+        if( isset($dados)){
+            Aluno::where("matricula","=",$matricula)->delete();
+             }else{
+             return response("aluno não encontrado", 404) ;
+            }
+             return redirect("/visualizaralunos");
     }
 }
