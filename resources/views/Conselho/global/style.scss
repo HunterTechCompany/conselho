@@ -1,0 +1,190 @@
+// Adicionais para o projeto
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap'); //Nunito sans font
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap'); //Tomorrow font
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap'); //Viga font
+
+html {
+    font-size: 36px;
+}
+
+$theme-colors: (
+    "azul-conselho": #0B12BD,
+);
+
+// Importe do bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Outros estilos globais
+
+html * {
+    box-sizing: border-box;
+}
+
+.header {
+    // height: 60px;
+    padding: 0px 12px;
+    * {
+        line-height: 10vh;
+        font-family: 'Viga', sans-serif;
+        color: white;
+    }
+}
+
+.font-1rem {
+    * {
+        font-size: 1rem;
+    }
+    img {
+        width: 52px;
+    }
+}
+
+.link-pagina {
+    margin-top: 26px;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 14px;
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 0px 24px 12px 0px;
+            &:hover {
+                color: #0B12BD;
+                transition: all 0.4s;
+            }
+        }
+    }
+
+}
+
+.link-pagina ul {
+    padding: 0px 16px;
+    font-size: 0.756rem;
+}
+
+.grid-principal {
+    display: grid;
+    grid-template-areas: "header header header header header header" "menu principal principal principal principal principal";
+    grid-template-rows: minmax(0px, 10vh) minmax(90vh, max-content);
+    grid-template-columns: [menu] 22vw;
+}
+
+.gridHeader { grid-area: header; }
+.gridMenu { grid-area: menu; }
+.gridPrincipal { grid-area: principal; padding: 26px 16px; }
+
+.border-bottom-conselho {
+    border-bottom: 1px solid black;
+}
+
+.border-right-conselho {
+    border-right: 1px solid black;
+}
+
+.section-user {
+    height: 100px;
+    h1 {
+        line-height: 100px;
+        font-size: 1rem;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.font-tomorrow {
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.font-nunito-sans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.titulo-pagina {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.font-size-756 {
+    font-size: 0.756rem;
+}
+
+.font-size-658 {
+    font-size: 0.658rem;
+}
+
+.font-size-542 {
+    font-size: 0.542rem;
+}
+
+.Buscador {
+    width: 50%;
+    height: 36px;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.565rem;
+    padding: 2px 6px;
+    &:focus {
+        outline: none;
+        border: 1px solid black;
+    }
+}
+
+.Selecao {
+    height: 36px;
+    background: none;
+    -webkit-appearance: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 0.565rem;
+}
+
+main {
+    height: 100%
+}
+
+.botao-editar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+    color: black;
+    border-radius: 5px;
+    background-color: #44C4A1;
+    &:hover {
+        color: whitesmoke;
+        position: relative;
+        top: 3px;
+        transition: all 0.4s;
+    }
+}
+
+.botao-excluir {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px;
+    color: black;
+    border-radius: 5px;
+    background-color: #FF0000;
+    &:hover {
+        color: whitesmoke;
+        position: relative;
+        top: 3px;
+        transition: 0.4s
+    }
+}
+// atendimentos - tipos_de_atendimentos
+@import "../Administrador/Atendimentos/tipos_de_atendimentos/scss/style.scss";
+
+@import "../Administrador/Atendimentos/criar&editar_atendimentos/scss/style.scss";
+
+@import "../Administrador/Disciplinas/disciplinas/scss/style.scss";
+
+@import "../Administrador/Disciplinas/criar&editar_disciplina/scss/style.scss";
