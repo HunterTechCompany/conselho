@@ -46,6 +46,10 @@ return [
             'driver' => 'database',
             'table' => 'cache',
             'connection' => null,
+<<<<<<< HEAD
+            'lock_connection' => null,
+=======
+>>>>>>> dd3f2ed796da87ee7bc3443506551bd7ea44297b
         ],
 
         'file' => [
@@ -75,6 +79,10 @@ return [
         'redis' => [
             'driver' => 'redis',
             'connection' => 'cache',
+<<<<<<< HEAD
+            'lock_connection' => 'default',
+=======
+>>>>>>> dd3f2ed796da87ee7bc3443506551bd7ea44297b
         ],
 
         'dynamodb' => [

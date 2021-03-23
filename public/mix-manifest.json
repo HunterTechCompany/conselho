@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css"
+=======
     "/conselho/js/bootstrap.js": "/conselho/js/bootstrap.js",
     "/conselho/js/global.js": "/conselho/js/global.js",
     "/conselho/js/jquery.js": "/conselho/js/jquery.js",
     "/conselho/css/style.css": "/conselho/css/style.css"
+>>>>>>> dd3f2ed796da87ee7bc3443506551bd7ea44297b
 }
