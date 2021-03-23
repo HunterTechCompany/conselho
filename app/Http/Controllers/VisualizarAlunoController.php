@@ -23,13 +23,13 @@ class VisualizarAlunoController extends Controller
     {
         $aluno = Aluno::all();
         $dados = $this->aluno->paginate($this->total);
-        return view ( "Conselho/Coordenador/VisualizarAlunos/VisualizarAlunos", compact( "dados"));
+        return view ( "Conselho/Coordenador/Aluno/VisualizarAlunos", compact( "dados"));
     }
 
     public function index2()
     {
 
-        return view ( "Conselho/Coordenador/AdicionarAluno/AdicionarAluno");
+        return view ( "Conselho/Coordenador/Aluno/AdicionarAluno");
     }
 
     /**
@@ -85,7 +85,7 @@ class VisualizarAlunoController extends Controller
         
         $dados = Aluno::where( "matricula","=",$matricula)->get();
         if ( isset ( $dados ))
-            return view ('Conselho/Coordenador/EditarAluno/EditarAluno',compact("dados"));
+            return view ('Conselho/Coordenador/Aluno/EditarAluno',compact("dados"));
     }
 
     public function update(Request $request, $matricula)

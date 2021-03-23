@@ -23,7 +23,7 @@ class GerenciarAlunoController extends Controller
     {
         $aluno = Aluno::all();
         $dados = $this->aluno->paginate($this->total);
-        return view ( "Conselho/Coordenador/GerenciarAlunos/GerenciarAlunos", compact( "dados"));
+        return view ( "Conselho/Coordenador/Aluno/GerenciarAlunos", compact( "dados"));
     }
 
     /**
