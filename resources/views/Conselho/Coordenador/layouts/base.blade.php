@@ -16,7 +16,7 @@
     <section class="corpo__secaoPrincipal">
         <section class="secaoPrincipal__secaoMenu">
             <p class="secaoMenu__usuario">
-                Fulano
+                {{ ucfirst(Auth::user()->name) }}
             </p>
             <nav class="secaoMenu__nav">
                 <ul class="secaoMenu__nav__ul">
@@ -47,7 +47,8 @@
                         </a>
                     </li>
                     <li class="ul__list">
-                        <a class="ul__list__a" href="#">
+                        <a class="ul__list__a" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             sair
                         </a>
                     </li>
@@ -57,6 +58,9 @@
         <main class="secaoPrincipal__main">
             @yield('main')
         </main>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
     </section>
 </body>
 </html>

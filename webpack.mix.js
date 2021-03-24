@@ -19,4 +19,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/conselho/js/bootstrap.js')
     .sass('resources/views/Conselho/global/style.scss', 'public/conselho/css/style.css')
 
-    .js('resources/views/Conselho/global/script.js', 'public/conselho/js/global.js');
+    .js('resources/views/Conselho/global/script.js', 'public/conselho/js/global.js')
+    .js('resources/views/Conselho/Coordenador/layouts/scripts.js', 'public/site/scripts.js');

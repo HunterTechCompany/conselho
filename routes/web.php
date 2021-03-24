@@ -22,10 +22,24 @@ use League\CommonMark\Block\Element\Document;
 
 Route::get('/', function () {
     if(Auth::user()) {
+        if(Auth::user()->tipo == 2) {
+            return redirect(url('/coordenador'));
+        }
+        else {
+            return redirect(url('/home'));
+        }
+    }
+    else {
+        return redirect(url('/login'));
+    }
+});
+
+Route::get('/coordenador', function() {
+    if(Auth::user()->tipo == 2) {
         return view('Conselho.Coordenador.layouts.base');
     }
     else {
-        echo('faça login');
+        return redirect(url('/'));
     }
 });
 
