@@ -19,9 +19,5 @@ class TrustProxies extends Middleware
      *
      * @var int
      */
-<<<<<<< HEAD
     protected $headers = Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_HOST | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO | Request::HEADER_X_FORWARDED_AWS_ELB;
-=======
-    protected $headers = Request::HEADER_X_FORWARDED_ALL;
->>>>>>> dd3f2ed796da87ee7bc3443506551bd7ea44297b
 }
