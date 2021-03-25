@@ -49,9 +49,21 @@
                             
                             <td class="bt-col tb-border">
                                 @if ($var->status == 0)
-                                    <a class="bt-tabela bt-ativar"><img class="bt-icon" src="{{ url('/icons/ativar.png') }}" alt="ATIVAR"></a>
+                                    <form action="/coordenador/gerenciar-turmas/update" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="_method" value="PATCH">
+                                        <input type="hidden" name="chave" value="{{ $var->id }}">
+                                        <input type="hidden" name="status" value="{{ $var->status }}">
+                                        <button type="submit" class="bt-tabela bt-ativar"><img class="bt-icon" src="{{ url('/icons/ativar.png') }}" alt="ATIVAR"></button>
+                                    </form>
                                 @else
-                                    <a class="bt-tabela bt-desativar"><img class="bt-icon" src="{{ url('/icons/desativar.png') }}" alt="DESATIVAR"></a>
+                                    <form action="/coordenador/gerenciar-turmas/update" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="_method" value="PATCH">
+                                        <input type="hidden" name="chave" value="{{ $var->id }}">
+                                        <input type="hidden" name="status" value="{{ $var->status }}">
+                                        <button type="submit" class="bt-tabela bt-desativar"><img class="bt-icon" src="{{ url('/icons/desativar.png') }}" alt="DESATIVAR"></button>
+                                    </form>
                                 @endif
                                 
                             </td>

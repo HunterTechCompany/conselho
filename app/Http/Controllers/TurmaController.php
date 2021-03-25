@@ -89,6 +89,18 @@ class TurmaController extends Controller
 
         $turma = Turma::where('id', $request->chave)->first();
 
+        if(request('status') !== null) {
+            if(request('status') == 0) {
+                $turma->status = 1;
+            } elseif(request('status') == 1) {
+                $turma->status = 0;
+            } else {
+                return;
+            }
+            $turma->save();
+            return redirect(url('/coordenador/gerenciar-turmas'));
+        }
+
         $turma->turma = $request->turma;
         $turma->modalidade = $request->modalidade;
         $turma->ano = $request->ano;

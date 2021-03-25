@@ -21,13 +21,18 @@ selecionaTurma = function (e, modal) {
     fechaModal(modal);
 };
 
-if(window.location.pathname == '/coordenador') {
+if(window.location.pathname == '/coordenador' || window.location.pathname == '/coordenador/') {
+    let turma_aux = document.querySelector('#turma-selecionada');
     if(!sessionStorage.turma_) {
         abreModal('div-back-modal');
+        turma_aux.setAttribute("style", "");
+        turma_aux.style.cursor = "pointer";
     }
 } else {
     let turma_aux = document.querySelector('#turma-selecionada');
     turma_aux.removeAttribute('onclick');
+    turma_aux.setAttribute("style", "");
+        turma_aux.style.cursor = "none";
 }
 
 if(sessionStorage.turma_) {
