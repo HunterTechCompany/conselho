@@ -1,4 +1,4 @@
-@extends('conselho.Coordenador.layouts.base')
+@extends('Conselho.Coordenador.layouts.base')
 
 @section('main')
 <section class="main__secao">
@@ -8,7 +8,7 @@
         </h2>
     </header>
     <div>
-        <a class="bt-voltar" href="#"><strong class="black">< </strong> Voltar</a>
+        <a class="bt-voltar" href="javascript:window.history.back()"><strong class="black">< </strong> Voltar</a>
     </div>
     <div class="div__tabela">
         <table class="main__secao__tabela width-100per">

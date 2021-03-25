@@ -19,8 +19,8 @@ class TurmaController extends Controller
      */
     public function index()
     {
-        $dados = DB::select('SELECT turmas.id,turmas.turma, turmas.modalidade, turmas.ano, turmas.status FROM turmas INNER JOIN users_turmas ON users_turmas.id_turma = turmas.id AND users_turmas.id_usuario = 2 ORDER BY turmas.turma');
-        dd($dados);
+        $dados = DB::select('SELECT turmas.id, turmas.turma, turmas.modalidade, turmas.ano, turmas.status FROM turmas INNER JOIN users_turmas ON users_turmas.id_turma = turmas.id AND users_turmas.id_usuario = '.Auth::user()->id.' ORDER BY turmas.turma');
+        return view('Conselho.Coordenador.Turmas.gerenciar__turmas', compact('dados'));
     }
 
     /**
@@ -52,8 +52,7 @@ class TurmaController extends Controller
      */
     public function show(Turma $turma)
     {
-        $dados = array();
-        dd($turma);
+        return view('Conselho.Coordenador.Turmas.detalhes__turma', compact('turma'));
     }
 
     /**
@@ -74,7 +73,8 @@ class TurmaController extends Controller
         ];
 
         $dados = (object)$dados;
-        return view('teste.editarTurma', compact('dados'));
+
+        return view('Conselho.Coordenador.Turmas.editar__turma', compact('dados', 'cursos'));
     }
 
     /**
@@ -86,6 +86,7 @@ class TurmaController extends Controller
      */
     public function update(Request $request, Turma $turma)
     {
+
         $turma = Turma::where('id', $request->chave)->first();
 
         $turma->turma = $request->turma;
@@ -94,7 +95,7 @@ class TurmaController extends Controller
         $turma->id_curso = $request->curso;
 
         $turma->save();
-        dd($turma);
+        return redirect(url('/coordenador/gerenciar-turmas'));
     }
 
     /**
@@ -103,8 +104,14 @@ class TurmaController extends Controller
      * @param  \App\Models\Turma  $turma
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Turma $turma)
+    public function alternate(Turma $turma)
     {
-        //
+        if($turma->status == 0){
+            $turma->status = 1;
+        }elseif($turma->status == 1) {
+            $turma->status == 0;
+        }
+        $turma->save();
+        return redirect(url('/coordenador/gerenciar-turmas'));
     }
 }

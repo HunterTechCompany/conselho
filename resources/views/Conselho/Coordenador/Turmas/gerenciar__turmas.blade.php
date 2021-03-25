@@ -1,4 +1,4 @@
-@extends('conselho.Coordenador.layouts.base')
+@extends('Conselho.Coordenador.layouts.base')
 
 @section('main')
     <section class="main__secao">
@@ -35,34 +35,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-gerenciar"><img class="bt-icon" src="/icons/gerenciar.png" alt="GERENCIAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-ativar"><img class="bt-icon" src="/icons/ativar.png" alt="ATIVAR"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-gerenciar"><img class="bt-icon" src="/icons/gerenciar.png" alt="GERENCIAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-ativar"><img class="bt-icon" src="/icons/ativar.png" alt="ATIVAR"></button>
-                        </td>
-                    </tr>
+                    @foreach ($dados as $var)
+                        <tr>
+                            <td class="tb-border">{{ $var->turma }}</td>
+                            <td class="tb-border">{{ $var->modalidade }}</td>
+                            <td class="tb-border">{{ $var->ano }}</td>
+                            <td class="bt-col tb-border">
+                                <a href="{{ url('/coordenador/gerenciar-turmas/gerenciar/'.$var->id) }}" class="bt-tabela bt-gerenciar"><img class="bt-icon" src="{{ url('/icons/gerenciar.png') }}" alt="GERENCIAR"></a>
+                            </td>
+                            <td class="bt-col tb-border">
+                                <a href="{{ url('/coordenador/gerenciar-turmas/editar/'.$var->id) }}" class="bt-tabela bt-editar"><img class="bt-icon" src="{{ url('/icons/editar.png') }}" alt="EDITAR"></a>
+                            </td>
+                            
+                            <td class="bt-col tb-border">
+                                @if ($var->status == 0)
+                                    <a class="bt-tabela bt-ativar"><img class="bt-icon" src="{{ url('/icons/ativar.png') }}" alt="ATIVAR"></a>
+                                @else
+                                    <a class="bt-tabela bt-desativar"><img class="bt-icon" src="{{ url('/icons/desativar.png') }}" alt="DESATIVAR"></a>
+                                @endif
+                                
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

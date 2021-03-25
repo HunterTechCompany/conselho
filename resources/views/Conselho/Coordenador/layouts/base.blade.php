@@ -21,7 +21,7 @@
             <nav class="secaoMenu__nav">
                 <ul class="secaoMenu__nav__ul">
                     <li class="ul__list">
-                        <a class="ul__list__a" href="#">
+                        <a id='turma-selecionada' onclick="abreModal('div-back-modal')" class="ul__list__a">
                             turmas
                             <i>+</i>
                         </a>
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li class="ul__list">
-                        <a class="ul__list__a" href="#">
+                        <a class="ul__list__a" href="{{ url('/coordenador/gerenciar-turmas') }}">
                             gerenciar turmas
                         </a>
                     </li>
@@ -62,5 +62,22 @@
             @csrf
         </form>
     </section>
+
+    <div id="div-back-modal" class="back-modal">
+        <div class="modal-turmas">
+            <h3>Selecione uma turma</h3>
+            <div class="div-modal-buttom">
+                @if ($turmas ?? '' != null)
+                    @foreach ($turmas ?? '' as $var)
+                        <button onclick="selecionaTurma(this, 'div-back-modal')" class="modal-buttom" value="{{ $var->id }}">{{ $var->turma }}</button>
+                    @endforeach
+                @else
+                    <span class="no-access">SEM ACESSO À TURMAS</span>
+                @endif
+            </div>
+            
+        </div>
+    </div>
+    <script src="{{ url('/site/scripts.js') }}"></script>
 </body>
 </html>

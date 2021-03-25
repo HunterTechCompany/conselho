@@ -4,6 +4,7 @@ use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\AnotacaoTurmaController;
 use App\Http\Controllers\BimestreController;
 use App\Http\Controllers\TurmaController;
+use App\Http\Controllers\RoutesController;
 use App\Models\Turma;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,30 +21,18 @@ use League\CommonMark\Block\Element\Document;
 |
 */
 
-Route::get('/', function () {
-    if(Auth::user()) {
-        if(Auth::user()->tipo == 2) {
-            return redirect(url('/coordenador'));
-        }
-        else {
-            return redirect(url('/home'));
-        }
-    }
-    else {
-        return redirect(url('/login'));
-    }
-});
+Route::get('/', [RoutesController::class, 'login']);
 
-Route::get('/coordenador', function() {
-    if(Auth::user()->tipo == 2) {
-        return view('Conselho.Coordenador.layouts.base');
-    }
-    else {
-        return redirect(url('/'));
-    }
-});
+Route::get('/coordenador', [RoutesController::class, 'identificacao']);
+
+Route::get('/coordenador/gerenciar-turmas', [TurmaController::class, 'index']);
+
+Route::get('/coordenador/gerenciar-turmas/gerenciar/{turma}', [TurmaController::class, 'show']);
+
+Route::get('/coordenador/gerenciar-turmas/editar/{turma}', [TurmaController::class, 'edit']);
+
+Route::patch('/coordenador/gerenciar-turmas/update', [TurmaController::class, 'update']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-

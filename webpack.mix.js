@@ -20,4 +20,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/views/Conselho/global/style.scss', 'public/conselho/css/style.css')
 
     .js('resources/views/Conselho/global/script.js', 'public/conselho/js/global.js')
-    .js('resources/views/Conselho/Coordenador/layouts/scripts.js', 'public/site/scripts.js');
+    .js('resources/views/Conselho/Coordenador/layouts/scripts.js', 'public/site/scripts.js')
+    .sass('resources/views/Conselho/Coordenador/layouts/styles.scss', 'public/site/styles.css');
