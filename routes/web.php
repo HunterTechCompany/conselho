@@ -33,6 +33,18 @@ Route::get('/coordenador/gerenciar-turmas/editar/{turma}', [TurmaController::cla
 
 Route::patch('/coordenador/gerenciar-turmas/update', [TurmaController::class, 'update']);
 
+Route::get('/coordenador/bimestres', [BimestreController::class, 'index']);
+
+Route::post('/coordenador/bimestres/criar', [BimestreController::class, 'create']);
+
+Route::post('/coordenador/bimestres/save', [BimestreController::class, 'store']);
+
+Route::get('/coordenador/bimestres/editar/{bimestre}', [BimestreController::class, 'edit']);
+
+Route::patch('/coordenador/bimestres/update', [BimestreController::class, 'update']);
+
+Route::delete('/coordenador/bimestres/delete', [BimestreController::class, 'delete']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

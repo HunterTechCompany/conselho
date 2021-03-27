@@ -12,7 +12,8 @@ class Bimestre extends Model
     protected $fillable = [
         'bimestre',
         'media_bimestre',
-        'media_total'
+        'media_total',
+        'id_turma'
     ];
 
     protected $table = 'bimestres';

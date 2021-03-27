@@ -21,7 +21,7 @@
             <nav class="secaoMenu__nav">
                 <ul class="secaoMenu__nav__ul">
                     <li class="ul__list">
-                        <a id='turma-selecionada' onclick="abreModal('div-back-modal')" class="ul__list__a">
+                        <a id='turma-selecionada' onclick="abreModal('div-back-modal')" class="ul__list__a click">
                             turmas
                             <i>+</i>
                         </a>
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li class="ul__list">
-                        <a class="ul__list__a" href="#">
+                        <a class="ul__list__a" href="{{ url('coordenador/bimestres') }}">
                             bimestres
                         </a>
                     </li>

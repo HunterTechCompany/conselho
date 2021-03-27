@@ -1,3 +1,4 @@
+const { has } = require("lodash");
 
 abreModal = function (idModal) {
     const modal = document.querySelector('#' + idModal);
@@ -40,4 +41,13 @@ if(sessionStorage.turma_) {
     let turma_ = JSON.parse(jsonTurma);
     let turma_aux = document.querySelector('#turma-selecionada');
     turma_aux.innerHTML = turma_.name + "<i>+</i>";
+}
+
+idTurma = function () {
+    let turma_ = JSON.parse(sessionStorage.getItem('turma_'));
+    document.querySelector('#turma_id').value = turma_.value;
+}
+
+if(document.querySelector('#turma_id') && sessionStorage.turma_) {
+    idTurma();
 }

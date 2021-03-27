@@ -579,3 +579,7 @@ Modal formation
   position: relative;
   top: 1.2px;
 }
+
+.click {
+  cursor: pointer;
+}

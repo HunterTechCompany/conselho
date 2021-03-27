@@ -1,4 +1,4 @@
-@extends('conselho/Coordenador/layouts/base')
+@extends('Conselho/Coordenador/layouts/base')
 
 @section('main')
     <section class="main__secao">
@@ -34,28 +34,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-desativar"><img class="bt-icon" src="/icons/desativar.png" alt="DESATIVAR"></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="tb-border">ok</td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></button>
-                        </td>
-                        <td class="bt-col tb-border">
-                            <button class="bt-tabela bt-desativar"><img class="bt-icon" src="/icons/desativar.png" alt="DESATIVAR"></button>
-                        </td>
-                    </tr>
+                    @foreach ($dados as $var)
+                        <tr>
+                            <td class="tb-border">{{ $var->bimestre }}</td>
+                            <td class="tb-border">{{ $var->media_bimestre }}</td>
+                            <td class="tb-border">{{ $var->media_total }}</td>
+                            <td class="bt-col tb-border">
+                                <a href="{{ url('/coordenador/bimestres/editar/'.$var->id) }}" class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></a>
+                            </td>
+                            <td class="bt-col tb-border">
+                                <form action="{{ url('/coordenador/bimestres/delete') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="chave" value="{{ $var->id }}">
+                                    <button type="submit" class="bt-tabela bt-desativar"><img class="bt-icon" src="/icons/desativar.png" alt="DELETAR"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
@@ -73,7 +69,11 @@
             </ul>
         </nav>
         <div>
-            <a class="bt-adicionar" href="#">Adicionar</a>
+            <form id="create-form" action="{{ url('/coordenador/bimestres/criar') }}" method="POST">
+                @csrf
+                <input id="turma_id" type="hidden" name="turma" value="">
+            </form>
+            <a class="bt-adicionar click" onclick="document.querySelector('#create-form').submit()">Adicionar</a>
         </div>
     </section>
 @endsection

@@ -1,4 +1,4 @@
-@extends('conselho.Coordenador.layouts.base')
+@extends('Conselho.Coordenador.layouts.base')
 
 @section('main')
 <section class="main__secao">
@@ -14,8 +14,9 @@
         <h3 class="center-align">Turma</h3>
     </div>
     <div class="div-bimestres">
-        <form action="" method="POST">
+        <form action="{{ url('/coordenador/bimestres/save') }}" method="POST">
             @csrf
+            <input type="hidden" name="turma" value="{{ $turma }}">
             <div class="div-flex">
                 <div class="div-inline flex-100per">
                     <label class="bold width-30per d-inline-block" for="bimestre">Bimestre:</label>

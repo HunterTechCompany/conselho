@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bimestre;
+use App\Models\Turma;
 use Illuminate\Http\Request;
 
 class BimestreController extends Controller
@@ -15,7 +16,7 @@ class BimestreController extends Controller
     public function index()
     {
         $dados = Bimestre::all();
-        dd($dados);
+        return view('Conselho.Coordenador.Bimestres.bimestres__listar', compact('dados'));
     }
 
     /**
@@ -25,7 +26,8 @@ class BimestreController extends Controller
      */
     public function create()
     {
-        //retorna página create
+        $turma = request('turma');
+        return view('Conselho.Coordenador.Bimestres.bimestres__adicionar', compact('turma'));
     }
 
     /**
@@ -38,10 +40,12 @@ class BimestreController extends Controller
     {
         $dados = [
             'bimestre' => request('bimestre'),
-            'media_bimestre' => request('media_bimestre'),
-            'media_total' =>request('media_total')
+            'media_bimestre' => request('media_bimestral'),
+            'media_total' =>request('media_acumulada'),
+            'id_turma' => request('turma')
         ];
         Bimestre::create($dados);
+        return redirect(url('/coordenador/bimestres'));
     }
 
     /**
@@ -63,16 +67,19 @@ class BimestreController extends Controller
      */
     public function edit(Bimestre $bimestre)
     {
+        $turma = Turma::where('id', $bimestre->id_turma)->first();
+
         $dados = [
             'chave' => $bimestre->id,
             'bimestre' => $bimestre->bimestre,
             'media_bimestre' => $bimestre->media_bimestre,
-            'media_total' =>$bimestre->media_total
+            'media_total' =>$bimestre->media_total,
+            'turma' => $turma->turma
         ];
 
         settype($dados, 'object');
 
-        return view('teste.editarBimestre', compact('dados'));
+        return view('Conselho.Coordenador.Bimestres.bimestres__editar', compact('dados'));
     }
 
     /**
@@ -89,6 +96,7 @@ class BimestreController extends Controller
         $bimestre->media_bimestre = $request->media_bimestre;
         $bimestre->media_total = $request->media_total;
         $bimestre->save();
+        return redirect(url('/coordenador/bimestres'));
     }
 
     /**
@@ -97,8 +105,10 @@ class BimestreController extends Controller
      * @param  \App\Models\Bimestre  $bimestre
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bimestre $bimestre)
+    public function delete(Bimestre $bimestre)
     {
-        //
+        $bimestre = Bimestre::where('id', request('chave'))->first();
+        $bimestre->delete();
+        return redirect(url('/coordenador/bimestres'));
     }
 }
