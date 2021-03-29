@@ -51,3 +51,8 @@ idTurma = function () {
 if(document.querySelector('#turma_id') && sessionStorage.turma_) {
     idTurma();
 }
+
+setKey = function (e) {
+    let element = document.querySelector('#key_delete');
+    element.setAttribute('value', e.value);
+}

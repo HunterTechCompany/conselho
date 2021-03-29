@@ -5,9 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Bimestre;
 use App\Models\Turma;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BimestreController extends Controller
 {
+
+    public function __construct()
+    {
+        if(!Auth::user()) {
+            return redirect(url('/login'));
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *

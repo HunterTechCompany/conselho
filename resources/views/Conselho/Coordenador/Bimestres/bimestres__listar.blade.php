@@ -43,15 +43,24 @@
                                 <a href="{{ url('/coordenador/bimestres/editar/'.$var->id) }}" class="bt-tabela bt-editar"><img class="bt-icon" src="/icons/editar.png" alt="EDITAR"></a>
                             </td>
                             <td class="bt-col tb-border">
-                                <form action="{{ url('/coordenador/bimestres/delete') }}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <input type="hidden" name="chave" value="{{ $var->id }}">
-                                    <button type="submit" class="bt-tabela bt-desativar"><img class="bt-icon" src="/icons/desativar.png" alt="DELETAR"></button>
-                                </form>
+                                <button type="submit" onclick="abreModal('div-back-modal');setKey(this)" class="bt-tabela bt-desativar" value="{{ $var->id }}"><img class="bt-icon" src="/icons/desativar.png" alt="DELETAR"></button>
                             </td>
                         </tr>
                     @endforeach
+                    <div id="div-back-modal" class="back-modal">
+                        <div class="modal-turmas">
+                            <h3>Essa ação irá deletar este bimestre!<br>Deseja continuar?</h3>
+                            <div class="div-modal-buttom flex-between">
+                                <form class="dnone" action="{{ url('/coordenador/bimestres/delete') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input id="key_delete" type="hidden" name="chave">
+                                    <button class="modal-buttom" type="submit">SIM</button>
+                                </form>
+                                <button onclick="fechaModal('div-back-modal')" class="modal-buttom">NÃO</button>
+                            </div>
+                        </div>
+                    </div>
                 </tbody>
             </table>
         </div>

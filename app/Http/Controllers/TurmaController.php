@@ -12,6 +12,14 @@ use App\Models\User;
 
 class TurmaController extends Controller
 {
+
+    public function __construct()
+    {
+        if(!Auth::user()) {
+            return redirect(url('/login'));
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *

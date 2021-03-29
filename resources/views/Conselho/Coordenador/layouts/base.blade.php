@@ -16,7 +16,7 @@
     <section class="corpo__secaoPrincipal">
         <section class="secaoPrincipal__secaoMenu">
             <p class="secaoMenu__usuario">
-                {{ ucfirst(Auth::user()->name) }}
+                {{ Auth::user()->name }}
             </p>
             <nav class="secaoMenu__nav">
                 <ul class="secaoMenu__nav__ul">
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li class="ul__list">
-                        <a class="ul__list__a" href="{{ url('coordenador/bimestres') }}">
+                        <a class="ul__list__a" href="{{ url('/coordenador/bimestres') }}">
                             bimestres
                         </a>
                     </li>
